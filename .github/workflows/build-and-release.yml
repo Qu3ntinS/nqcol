@@ -3,7 +3,7 @@ name: Build and Release
 on:
   push:
     branches:
-      - main
+      - master
   workflow_dispatch:
 
 jobs:
@@ -69,7 +69,7 @@ jobs:
           retention-days: 30
 
       - name: Create Release
-        if: github.ref == 'refs/heads/main'
+        if: github.ref == 'refs/heads/master'
         uses: softprops/action-gh-release@v1
         with:
           tag_name: v${{ steps.get_version.outputs.version }}-${{ steps.get_sha.outputs.sha }}
@@ -81,7 +81,7 @@ jobs:
             **Commit:** ${{ github.sha }}  
             **Short SHA:** ${{ steps.get_sha.outputs.sha }}
 
-            Built automatically from commit on main branch.
+            Built automatically from commit on master branch.
 
             ## Installation
             1. Download the `nqcol-${{ steps.get_version.outputs.version }}.jar` file
