@@ -1,0 +1,28 @@
+{
+  "key.nqcol.toggleAutoHit": "Toggle AutoHit",
+  "key.nqcol.toggleAutoPress": "Toggle AutoPress",
+  "key.categories.nqcol": "Nqcol",
+  "text.autoconfig.nqcol.title": "Nqcol Configuration",
+  "text.autoconfig.nqcol.category.autoHit": "AutoHit",
+  "text.autoconfig.nqcol.category.autoPress": "AutoPress",
+  "text.autoconfig.nqcol.category.general": "General",
+  "text.autoconfig.nqcol.option.autoHit.enabled": "Enabled",
+  "text.autoconfig.nqcol.option.autoHit.enabled.@Tooltip": "Enable or disable AutoHit automation",
+  "text.autoconfig.nqcol.option.autoHit.minDelayMs": "Min Delay (ms)",
+  "text.autoconfig.nqcol.option.autoHit.minDelayMs.@Tooltip": "Minimum delay between attacks in milliseconds",
+  "text.autoconfig.nqcol.option.autoHit.maxDelayMs": "Max Delay (ms)",
+  "text.autoconfig.nqcol.option.autoHit.maxDelayMs.@Tooltip": "Maximum delay between attacks in milliseconds",
+  "text.autoconfig.nqcol.option.autoHit.jitterMs": "Jitter (ms)",
+  "text.autoconfig.nqcol.option.autoHit.jitterMs.@Tooltip": "Random jitter added to delay in milliseconds (±value)",
+  "text.autoconfig.nqcol.option.autoPress.enabled": "Enabled",
+  "text.autoconfig.nqcol.option.autoPress.enabled.@Tooltip": "Enable or disable AutoPress automation",
+  "text.autoconfig.nqcol.option.autoPress.minDelayMs": "Min Delay (ms)",
+  "text.autoconfig.nqcol.option.autoPress.minDelayMs.@Tooltip": "Minimum delay between key presses in milliseconds",
+  "text.autoconfig.nqcol.option.autoPress.maxDelayMs": "Max Delay (ms)",
+  "text.autoconfig.nqcol.option.autoPress.maxDelayMs.@Tooltip": "Maximum delay between key presses in milliseconds",
+  "text.autoconfig.nqcol.option.autoPress.keyToPress": "Key to Press",
+  "text.autoconfig.nqcol.option.autoPress.keyToPress.@Tooltip": "GLFW key code of the key to press (default: 79 = 'O')",
+  "text.autoconfig.nqcol.option.onlyRunInGame": "Only Run In Game",
+  "text.autoconfig.nqcol.option.onlyRunInGame.@Tooltip": "Only run automation when no menus are open"
+}
+

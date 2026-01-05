@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "nqcol",
+  "version": "${version}",
+  "name": "nqcol",
+  "description": "A client-side mod that automates certain actions with configurable delays.",
+  "authors": ["NQ_"],
+  "contact": {
+    "homepage": "https://quentins.dev/",
+    "sources": "https://github.com/Qu3ntinS/nqcol"
+  },
+  "license": "MIT",
+  "icon": "assets/nqcol/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": ["de.nq.nqcol.NqcolClient"],
+    "modmenu": ["de.nq.nqcol.config.ModMenuIntegration"]
+  },
+  "depends": {
+    "fabricloader": ">=0.16.9",
+    "fabric": "*",
+    "minecraft": "~1.21.4",
+    "cloth-config": ">=8.0.75"
+  },
+  "suggests": {
+    "modmenu": ">=6.0.0"
+  }
+}
