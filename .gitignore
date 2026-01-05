@@ -1,7 +1,9 @@
 # Gradle
 .gradle/
 build/
+# Allow gradle wrapper jar (needed for CI/CD)
 !gradle/wrapper/gradle-wrapper.jar
+# But ignore wrapper jar in root
 gradle-wrapper.jar
 
 # IDE
