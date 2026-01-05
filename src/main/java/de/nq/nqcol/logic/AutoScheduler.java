@@ -7,6 +7,7 @@ import net.minecraft.client.option.KeyBinding;
 import net.minecraft.client.util.InputUtil;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
+import net.minecraft.sound.SoundEvents;
 import org.lwjgl.glfw.GLFW;
 
 public class AutoScheduler {
@@ -40,6 +41,9 @@ public class AutoScheduler {
             client.inGameHud.setOverlayMessage(messageText, false);
         }
 
+        // Play sound feedback
+        playToggleSound(client, autoHitActive);
+
         if (autoHitActive) {
             scheduleNextAutoHit();
         }
@@ -67,6 +71,9 @@ public class AutoScheduler {
             // Only show action bar message (no chat message)
             client.inGameHud.setOverlayMessage(messageText, false);
         }
+
+        // Play sound feedback
+        playToggleSound(client, autoPressActive);
 
         if (autoPressActive) {
             scheduleNextAutoPress();
@@ -246,6 +253,29 @@ public class AutoScheduler {
             config.autoPress.maxDelayMs
         );
         nextAutoPressTimeMs = System.currentTimeMillis() + delay;
+    }
+
+    /**
+     * Plays a sound feedback when toggling features.
+     * Uses different pitches for ON (higher) and OFF (lower) states.
+     */
+    private static void playToggleSound(MinecraftClient client, boolean isActive) {
+        ClientPlayerEntity player = client.player;
+        if (player == null || client.world == null) {
+            return;
+        }
+
+        // Use note block sound with different pitches for ON/OFF
+        // ON: higher pitch (1.2f), OFF: lower pitch (0.8f)
+        float pitch = isActive ? 1.2f : 0.8f;
+        client.world.playSound(
+            player,
+            player.getBlockPos(),
+            SoundEvents.BLOCK_NOTE_BLOCK_PLING.value(),
+            net.minecraft.sound.SoundCategory.MASTER,
+            0.5f,  // Volume
+            pitch  // Pitch (higher = ON, lower = OFF)
+        );
     }
 
     /**
