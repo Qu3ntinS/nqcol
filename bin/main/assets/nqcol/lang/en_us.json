@@ -23,6 +23,8 @@
   "text.autoconfig.nqcol.option.autoPress.keyToPress": "Key to Press",
   "text.autoconfig.nqcol.option.autoPress.keyToPress.@Tooltip": "GLFW key code of the key to press (default: 79 = 'O')",
   "text.autoconfig.nqcol.option.onlyRunInGame": "Only Run In Game",
-  "text.autoconfig.nqcol.option.onlyRunInGame.@Tooltip": "Only run automation when no menus are open"
+  "text.autoconfig.nqcol.option.onlyRunInGame.@Tooltip": "Only run automation when no menus are open",
+  "text.autoconfig.nqcol.option.onlyAtNightAndDusk": "Only at night",
+  "text.autoconfig.nqcol.option.onlyAtNightAndDusk.@Tooltip": "When enabled, AutoHit and AutoPress only run during Minecraft night when Mobs are present (approx. 6:45pm–5:45am)"
 }
 

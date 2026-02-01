@@ -20,6 +20,10 @@ public class NqcolConfig implements ConfigData {
     @ConfigEntry.Category("general")
     public boolean onlyRunInGame = true;
 
+    @ConfigEntry.Category("general")
+    @ConfigEntry.Gui.Tooltip
+    public boolean onlyAtNightAndDusk = false;
+
     public static void load() {
         AutoConfig.register(NqcolConfig.class, GsonConfigSerializer::new);
     }

@@ -97,16 +97,28 @@ public class AutoScheduler {
         autoPressActive = config.autoPress.enabled;
 
         // Process AutoHit - set key pressed at START of tick so it gets processed
-        if (autoHitActive && currentTime >= nextAutoHitTimeMs) {
+        if (autoHitActive && currentTime >= nextAutoHitTimeMs && (!config.onlyAtNightAndDusk || isNightOrDusk(client))) {
             performAutoHit(client);
             scheduleNextAutoHit();
         }
 
         // Process AutoPress - set key pressed at START of tick so it gets processed
-        if (autoPressActive && currentTime >= nextAutoPressTimeMs) {
+        if (autoPressActive && currentTime >= nextAutoPressTimeMs && (!config.onlyAtNightAndDusk || isNightOrDusk(client))) {
             performAutoPress(client);
             scheduleNextAutoPress();
         }
+    }
+
+    /**
+     * Returns true if the current world time is night or dusk (18:00–5:00).
+     * Used when onlyAtNightAndDusk is enabled to skip AutoHit/AutoPress during the day.
+     */
+    private static boolean isNightOrDusk(MinecraftClient client) {
+        if (client.world == null) {
+            return false;
+        }
+        long timeOfDay = client.world.getTimeOfDay() % 24000L;
+        return timeOfDay >= 12500 && timeOfDay < 23500;
     }
 
     /**
