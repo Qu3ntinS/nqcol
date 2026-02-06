@@ -25,6 +25,20 @@
   "text.autoconfig.nqcol.option.onlyRunInGame": "Only Run In Game",
   "text.autoconfig.nqcol.option.onlyRunInGame.@Tooltip": "Only run automation when no menus are open",
   "text.autoconfig.nqcol.option.onlyAtNightAndDusk": "Only at night",
-  "text.autoconfig.nqcol.option.onlyAtNightAndDusk.@Tooltip": "When enabled, AutoHit and AutoPress only run during Minecraft night when Mobs are present (approx. 6:45pm–5:45am)"
+  "text.autoconfig.nqcol.option.onlyAtNightAndDusk.@Tooltip": "When enabled, AutoHit and AutoPress only run during Minecraft night when Mobs are present (approx. 6:45pm–5:45am)",
+  "text.autoconfig.nqcol.category.coordinateTrigger": "Coordinate Trigger",
+  "text.autoconfig.nqcol.option.coordinateTrigger.enabled": "Enabled",
+  "text.autoconfig.nqcol.option.coordinateTrigger.enabled.@Tooltip": "Enable or disable the coordinate trigger",
+  "text.autoconfig.nqcol.option.coordinateTrigger.triggerX": "Trigger X",
+  "text.autoconfig.nqcol.option.coordinateTrigger.triggerX.@Tooltip": "X coordinate of the trigger location",
+  "text.autoconfig.nqcol.option.coordinateTrigger.triggerY": "Trigger Y",
+  "text.autoconfig.nqcol.option.coordinateTrigger.triggerY.@Tooltip": "Y coordinate of the trigger location",
+  "text.autoconfig.nqcol.option.coordinateTrigger.triggerZ": "Trigger Z",
+  "text.autoconfig.nqcol.option.coordinateTrigger.triggerZ.@Tooltip": "Z coordinate of the trigger location",
+  "text.autoconfig.nqcol.option.coordinateTrigger.radius": "Trigger Radius",
+  "text.autoconfig.nqcol.option.coordinateTrigger.radius.@Tooltip": "Radius in blocks around the trigger coordinates",
+  "text.autoconfig.nqcol.option.coordinateTrigger.command": "Command",
+  "text.autoconfig.nqcol.option.coordinateTrigger.command.@Tooltip": "Command to execute (with / for slash commands, without for chat messages)",
+  "text.autoconfig.nqcol.option.coordinateTrigger.intervalMs": "Interval (ms)",
+  "text.autoconfig.nqcol.option.coordinateTrigger.intervalMs.@Tooltip": "Interval between repeated command executions in milliseconds"
 }
-

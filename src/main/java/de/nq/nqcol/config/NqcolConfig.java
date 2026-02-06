@@ -17,6 +17,10 @@ public class NqcolConfig implements ConfigData {
     @ConfigEntry.Gui.TransitiveObject
     public AutoPressConfig autoPress = new AutoPressConfig();
 
+    @ConfigEntry.Category("coordinateTrigger")
+    @ConfigEntry.Gui.TransitiveObject
+    public CoordinateTriggerConfig coordinateTrigger = new CoordinateTriggerConfig();
+
     @ConfigEntry.Category("general")
     public boolean onlyRunInGame = true;
 
@@ -58,6 +62,29 @@ public class NqcolConfig implements ConfigData {
 
         @ConfigEntry.Gui.Tooltip
         public int keyToPress = GLFW.GLFW_KEY_O;
+    }
+
+    public static class CoordinateTriggerConfig {
+        @ConfigEntry.Gui.Tooltip
+        public boolean enabled = false;
+
+        @ConfigEntry.Gui.Tooltip
+        public int triggerX = 4;
+
+        @ConfigEntry.Gui.Tooltip
+        public int triggerY = 74;
+
+        @ConfigEntry.Gui.Tooltip
+        public int triggerZ = -47;
+
+        @ConfigEntry.Gui.Tooltip
+        public int radius = 3;
+
+        @ConfigEntry.Gui.Tooltip
+        public String command = "/home afk";
+
+        @ConfigEntry.Gui.Tooltip
+        public int intervalMs = 5000;
     }
 }
 

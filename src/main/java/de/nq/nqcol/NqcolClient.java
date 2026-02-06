@@ -2,6 +2,7 @@ package de.nq.nqcol;
 
 import de.nq.nqcol.config.NqcolConfig;
 import de.nq.nqcol.logic.AutoScheduler;
+import de.nq.nqcol.logic.CoordinateTrigger;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
@@ -37,6 +38,7 @@ public class NqcolClient implements ClientModInitializer {
         // START tick: Set keys pressed so they get processed during the tick
         ClientTickEvents.START_CLIENT_TICK.register(client -> {
             AutoScheduler.tickStart(client);
+            CoordinateTrigger.tick(client);
         });
         
         // END tick: Handle toggles, process keybindings, and release keys
